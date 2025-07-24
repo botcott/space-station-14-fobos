@@ -66,6 +66,17 @@
 
 - type: entity
   parent: [ClothingNeckBase, BaseCommandContraband]
+  id: ClothingNeckMantleBlueShieldhoulder
+  name: blue shield's shoulder mantle
+  description: This mantle is a symbol of commitment to protection of station heads.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCommandContraband]
   id: ClothingNeckMantleRD
   name: research director's mantle
   description: A terribly comfortable shoulder draping for the discerning scientist of fashion.  # Corvax-Resprite

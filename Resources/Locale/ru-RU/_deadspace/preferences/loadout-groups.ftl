@@ -2,6 +2,7 @@
 loadout-group-default-white-underwear = Стандартное нижнее бельё
 # Command
 loadout-group-blue-shield-officer-jumpsuit = Синий щит, комбинезон
+loadout-group-blue-shield-officer-neck = Синий щит, шея
 loadout-group-blue-shield-officer-backpack = Синий щит, рюкзак
 loadout-group-blue-shield-officer-underwear = Синий щит, нижнее бельё
 # Civilian

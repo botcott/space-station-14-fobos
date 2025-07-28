@@ -27,6 +27,6 @@
   description: Эта мантия является символом преданности к делу защиты глав станции.
   components:
   - type: Sprite
-    sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+    sprite: _DeadSpace/Clothing/Neck/blueshieldmantle_shoulder.rsi
   - type: Clothing
-    sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+    sprite: _DeadSpace/Clothing/Neck/blueshieldmantle_shoulder.rsi

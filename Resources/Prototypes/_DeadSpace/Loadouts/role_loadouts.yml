@@ -4,6 +4,7 @@
   groups:
   # - GroupTankHarness # outerClothing occupied by startingGear
   - BlueShieldOfficerBackpack
+  - BlueShieldOfficerNeck
   - BlueShieldOfficerJumpsuit
   - Survival
   - Trinkets

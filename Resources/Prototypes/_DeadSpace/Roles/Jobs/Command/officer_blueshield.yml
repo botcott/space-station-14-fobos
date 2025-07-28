@@ -58,7 +58,6 @@
   id: BlueShieldOfficerGear
   equipment:
     head: ClothingHeadHatBeretBlueShield
-    neck: ClothingNeckMantleBlueShieldhoulder
     # back: ClothingBackpackBlueShield
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetAltCommand

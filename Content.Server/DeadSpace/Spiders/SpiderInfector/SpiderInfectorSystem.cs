@@ -14,6 +14,7 @@ using Content.Shared.Actions;
 using Content.Server.DeadSpace.Spiders.SpiderTerror.Components;
 using Content.Shared.DeadSpace.Abilities.Egg.Components;
 using Content.Shared.DeadSpace.Abilities.Egg;
+using Content.Server.DeadSpace.Races;
 
 namespace Content.Server.DeadSpace.InfectorDead.EntitySystems;
 
@@ -121,6 +122,12 @@ public sealed partial class SpiderInfectorSystem : EntitySystem
         if (HasComp<ZombieComponent>(target) || HasComp<PendingZombieComponent>(target) || HasComp<ZombifyOnDeathComponent>(target))
         {
             _popup.PopupEntity(Loc.GetString("Цель чем-то больна?"), uid, uid);
+            return false;
+        };
+
+        if (HasComp<ComputerEmotesComponent>(target))
+        {
+            _popup.PopupEntity(Loc.GetString("Цель не органик?"), uid, uid);
             return false;
         };
 

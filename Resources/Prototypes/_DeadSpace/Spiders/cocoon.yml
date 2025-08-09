@@ -40,6 +40,8 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: SpiderTerror
+  - type: NightVision
 
 - type: entity
   name: королевский паучий кокон

@@ -15,6 +15,7 @@ using Content.Shared.Mobs.Components;
 using Content.Server.DeadSpace.Abilities.Cocoon.Components;
 using Content.Server.DeadSpace.Spiders.SpiderTerror.Components;
 using Content.Server.DeadSpace.Spiders.SpiderTerror;
+using Content.Server.DeadSpace.Races;
 
 namespace Content.Server.DeadSpace.Abilities.Bloodsucker;
 
@@ -73,6 +74,9 @@ public sealed partial class BloodsuckerSystem : SharedBloodsuckerSystem
             return;
 
         var target = args.Target;
+
+        if (HasComp<ComputerEmotesComponent>(target))
+            return;
 
         if (TryComp<SpiderTerrorTombComponent>(target, out var spiderTerrorTombComp))
         {

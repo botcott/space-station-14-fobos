@@ -19,6 +19,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
+using Content.Shared.Silicons.Borgs.Components;
 
 namespace Content.Shared.Stunnable;
 
@@ -219,6 +220,9 @@ public abstract class SharedStunSystem : EntitySystem
         StatusEffectsComponent? status = null)
     {
         if (!Resolve(uid, ref status, false))
+            return false;
+
+        if (HasComp<BorgChassisComponent>(uid))
             return false;
 
         return TryKnockdown(uid, time, refresh, status) && TryStun(uid, time, refresh, status);

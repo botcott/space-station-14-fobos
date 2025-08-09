@@ -5,6 +5,7 @@ using JetBrains.Annotations;
 using Robust.Shared.Physics.Dynamics;
 using Content.Shared.Throwing;
 using Robust.Shared.Physics.Events;
+using Content.Shared.Silicons.Borgs.Components;
 
 namespace Content.Server.Stunnable
 {
@@ -22,6 +23,8 @@ namespace Content.Server.Stunnable
 
         private void TryDoCollideStun(EntityUid uid, StunOnCollideComponent component, EntityUid target)
         {
+            if (HasComp<BorgChassisComponent>(target))
+                return;
 
             if (EntityManager.TryGetComponent<StatusEffectsComponent>(target, out var status))
             {

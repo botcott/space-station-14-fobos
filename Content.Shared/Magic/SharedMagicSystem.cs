@@ -31,6 +31,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Spawners;
+using Content.Shared.Revenant.Components;
 
 namespace Content.Shared.Magic;
 
@@ -507,6 +508,12 @@ public abstract class SharedMagicSystem : EntitySystem
     {
         if (ev.Handled || !PassesSpellPrerequisites(ev.Action, ev.Performer))
             return;
+
+        if (HasComp<RevenantComponent>(ev.Target))
+        {
+            _popup.PopupEntity(Loc.GetString("Цель астральное существо?"), ev.Performer, ev.Performer);
+            return;
+        }
 
         ev.Handled = true;
         Speak(ev);
